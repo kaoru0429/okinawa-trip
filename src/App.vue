@@ -50,8 +50,9 @@ import ChecklistView from '@/pages/ChecklistView.vue'
 import ChildView from '@/pages/ChildView.vue'
 
 // Logic
-const { state } = provideNavigation()
-const currentDay = useCurrentDay()
+const navContext = provideNavigation()
+const { state } = navContext
+const currentDay = useCurrentDay(navContext)
 
 onMounted(() => {
   // Automatically switch to today based on useCurrentDay
