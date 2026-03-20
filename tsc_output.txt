@@ -1,0 +1,1 @@
+src/App.vue(2,24): error TS2307: Cannot find module './components/HelloWorld.vue' or its corresponding type declarations.

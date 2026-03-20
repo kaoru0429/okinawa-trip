@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-TW" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- 
+      Viewport 設定：
+      - width=device-width: 寬度與裝置相同
+      - initial-scale=1.0: 初始縮放比例為 1
+      - maximum-scale=1.0: 最大縮放比例為 1
+      - user-scalable=no: 禁止使用者縮放網頁，確保 PWA 體驗如同原生 App (防止雙擊放大/誤觸等問題)
+      - viewport-fit=cover: 讓網頁延伸到瀏海和底部安全區域之下，充分利用全螢幕
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    
+    <!-- 
+      蘋果 iOS 專用 Meta Tags：
+      - apple-mobile-web-app-capable: 允許網頁以「獨立模式」運行，隱藏 Safari 網址列與底部導航
+      - apple-mobile-web-app-status-bar-style: 設定狀態列風格，black-translucent 可將狀態列設為透明並浮在網頁上層
+      - apple-mobile-web-app-title: 設定在 iOS 主畫面上顯示的 App 名稱
+    -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="沖繩手冊" />
+    
+    <!-- iOS 專用圖示 (設定當使用者將網頁加到主畫面時的 Icon 圖片) -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
+    
+    <!-- 
+      主題顏色 (Theme Color)：
+      這裡定為與 Tailwind 的 bg-slate-950 相近深色 (#0f172a)。
+      用於控制 Android 狀態列顏色或 PWA 應用程式頭部 UI 顏色，保持統一的沉浸式深色視覺。
+    -->
+    <meta name="theme-color" content="#0f172a" />
+    
+    <!-- 
+      格式自動偵測關閉 (Format Detection)：
+      關閉 iOS Safari 對一串類似電話號碼數字的自動連結化。
+      我們會在程式碼中明確使用 <a href="tel:..."> 以避免隨意的數字(例如 Map Code) 被當成電話撥號。
+    -->
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- PWA Manifest 連結 (vite-plugin-pwa 會自動生成內容注入) -->
+    <link rel="manifest" href="/manifest.webmanifest">
+    
+    <title>沖繩親子旅行手冊</title>
+  </head>
+  <!-- 
+    預設 body 樣式：
+    - bg-slate-950, text-slate-100：專案原則「深色唯一」的底色與文字色
+    - overscroll-y-none (Tailwind 中可能是 overscroll-none 或寫在 CSS 裡)：後續由 CSS 定義包含
+  -->
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-sky-500/30">
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

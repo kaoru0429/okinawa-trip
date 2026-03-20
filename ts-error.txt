@@ -1,0 +1,14 @@
+src/components/BackupPlanCard.vue(9,20): error TS2339: Property 'id' does not exist on type 'BackupPlan'.
+src/components/FacilityFinder.vue(67,94): error TS2339: Property 'category' does not exist on type 'EmergencyContact'.
+src/components/FacilityFinder.vue(70,7): error TS6133: 'getDayName' is declared but its value is never read.
+src/components/FacilityFinder.vue(88,31): error TS2339: Property 'nursingRoomLocation' does not exist on type 'Facilities'.
+src/components/FacilityFinder.vue(95,31): error TS2339: Property 'diaperChangeLocation' does not exist on type 'Facilities'.
+src/components/SOSButton.vue(44,22): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+src/components/SOSButton.vue(44,62): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+src/components/SpotCard.vue(14,29): error TS2339: Property 'destination' does not exist on type 'DrivingInfo'.
+src/components/SpotCard.vue(14,64): error TS2339: Property 'destination' does not exist on type 'DrivingInfo'.
+src/components/SpotCard.vue(43,38): error TS2339: Property 'nursingRoomLocation' does not exist on type 'Facilities'.
+src/components/SpotCard.vue(96,67): error TS2339: Property 'type' does not exist on type 'DiningOption'.
+src/components/SpotCard.vue(96,82): error TS2339: Property 'priceRange' does not exist on type 'DiningOption'.
+src/components/SpotCard.vue(97,25): error TS2339: Property 'type' does not exist on type 'DiningOption'.
+src/components/SpotCard.vue(97,45): error TS2339: Property 'priceRange' does not exist on type 'DiningOption'.

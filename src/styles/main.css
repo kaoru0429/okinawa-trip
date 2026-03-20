@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* 系統字體堆疊 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    /* 避免下拉刷新或 iOS 彈性捲動干擾 */
+    overscroll-behavior-y: contain;
+    /* 深色背景與淺色文字 */
+    @apply bg-slate-950 text-slate-100;
+    /* 防止誤觸選取 */
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* 給 Map Code 用的還原選取類別 */
+  .selectable {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+
+  /* 互動元素移除點擊高光，並優化觸控操作 */
+  button, a {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+}
+
+@layer utilities {
+  /* 安全區域工具類 (處理 iPhone 瀏海與底部橫條) */
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* 隱藏捲軸 */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* 最小觸控目標 48x48 */
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}

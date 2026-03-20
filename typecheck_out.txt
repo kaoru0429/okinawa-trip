@@ -1,0 +1,5 @@
+
+> okinawa-trip@0.0.0 typecheck
+> vue-tsc --noEmit
+
+src/App.vue(2,24): error TS2307: Cannot find module './components/HelloWorld.vue' or its corresponding type declarations.
